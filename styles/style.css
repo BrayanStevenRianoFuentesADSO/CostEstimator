@@ -1,0 +1,40 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.header{
+   display: flex;
+   justify-content: center;
+   padding: 90px;
+   background:linear-gradient(45deg, green, blue);
+} 
+
+.texto{
+    display: flex;
+    justify-content: center;
+    border: 2px solid black;
+    margin: 50px;
+    text-align: left;
+    color: white;
+    font-size: 30px;
+    
+}
+.comenzar {
+    background-color: blue;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+    border: 1px solid black;
+    width: 100px;
+    height: 20px;
+    margin-top: auto;
+    border-radius: 10px;
+}
+
+.comenzar a{
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
