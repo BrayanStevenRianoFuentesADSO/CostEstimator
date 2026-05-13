@@ -11,12 +11,16 @@
     --bg:#f2f7fb;
     --card-bg:#feffff;
     --primary:#3374da;
+    --primary-hover:#3381da;
     --primary-gray:#bac1cb;
 }
 
 body{
 
     background: var(--bg);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 header{
@@ -37,6 +41,7 @@ img{
     position: relative;
     right: 8px;
 }
+
 .header__nav, a{
     width: 80%;
     color: black;
@@ -49,33 +54,23 @@ img{
     text-align: center;
     padding: 8px;
     gap: 2px;
+    padding-right: 1px;
 }
 
-.header__button{
-    border: 1px solid black;
-    border-radius: 8px;
-}
+
 
 
 main{
 
     padding: 1.5rem 1rem ;
-}
-.plataformas{
 
-    height: auto;
-    background-color: var(--card-bg);
     width: 100%;
-    border-radius: 15px;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    padding: 1rem;
-    text-align: center;
-    box-shadow: 2px 2px 2px var(--primary-gray);
+    
 }
-
 
 .pasos{
     width: 90%;
@@ -83,7 +78,7 @@ main{
     display: flex;
     align-items: center;
     flex-direction: column;
-    
+    margin-bottom: 3rem;
 }
 
 .pasos__grafico{
@@ -99,7 +94,7 @@ main{
 .pasos__progreso{
 
     position: absolute;
-    width: 25%;
+    width: 80%;
     height: 10px;
     background-color: var(--primary);
     z-index: 1;
@@ -124,67 +119,92 @@ main{
     background-color: var(--primary);
     border-radius: 50%;
 }
-h2{
 
-    margin-top: 2rem;
-    margin-bottom: 1rem;
-}
-
-.plataforma__form{
-
-    width: 100%;
-    
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    gap: 10px;
-}
-
-.plataforma_checkbox{
-
-    width: 100%;
-    min-height: 275px;
-    border-radius: 13px;
-    border: solid 3px var(--primary-gray);
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 1rem;
-    font-size: 18px;
+.details p{
     text-align: center;
-}
-.check{
-    width: 10%;
-    align-self: flex-end;
-    display: none;
-}
-.checkbox__img{
-
-    width: 60%;
-    margin-bottom: 10px;
+    margin-bottom: 3rem;
+    
 }
 
-.plataforma_checkbox:checked{
-
-    border: solid 3px var(--primary);
+h3{
+    margin: 0 0 2rem 0;
 }
 
-.form__button_cancel, .form__button_next{
+.details__input, .details__input_mensaje{
+    width: 90%;
+    height: 2.5rem;
+    border-radius: 10px;
+    border: solid 3px var(--primary-gray);
+    padding-left: 1rem;
+    margin-bottom: 2rem;
+}
+
+.details__input_mensaje{
+
+    height: 12rem;
+    
+}
+label{
+    align-self: flex-start;
+    margin-left: 1rem;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: var(--card-bg);
+    border-radius: 10px;
+}
+
+.details__button{
 
     width: 90%;
     height: 3rem;
     margin-top: 1rem;
     color: white;
-    background-color: var(--primary-gray);
+    background-color: var(--primary);
     border: none;
     border-radius: 5px;
     font-size: 16px;
 }
 
-.form__button_next{
+.details__button:hover{
+    background-color: var(--primary-hover);
+}
+
+.resources{
+    width: 100%;
+    
+   
+    height: 36rem;
+    margin-top: 3rem;
+}
+
+.recurso{
+    width: 100%;
+    height: 33%;
+
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+    gap: 1rem;
+    border: 2px solid var(--primary-gray);
+    border-radius: 10px;
+    
+}
+
+.recurso__img{
+    width: 25%;
+    
 
 
-    background-color: var(--primary);
-    margin-top: 0;
+}
+
+.recurso p{
+    width: 75%;
+    text-align: left;
+    margin-top: 10%;
 }
