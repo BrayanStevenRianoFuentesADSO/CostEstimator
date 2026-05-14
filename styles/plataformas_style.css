@@ -153,7 +153,9 @@ h2{
     padding: 1rem;
     font-size: 18px;
     text-align: center;
+    transition: 0.2s ease;
 }
+
 .check{
     width: 10%;
     align-self: flex-end;
@@ -187,4 +189,29 @@ h2{
 
     background-color: var(--primary);
     margin-top: 0;
+}
+
+.ios__checkbox, .android__checkbox, .web__checkbox{
+    appearance: none;
+    width: 82%;
+    height: 30.5vh;
+    position: absolute;
+    z-index: 10;
+   transition: 1s;
+
+   opacity: 50%;
+   border-radius: 10px;
+   
+}
+
+.android__checkbox{
+    margin-top: 77%;
+}
+
+.checkbox:checked+.plataforma_checkbox{
+    border: 5px solid var(--primary);
+}
+
+.web__checkbox{
+    margin-top: 155%;
 }
