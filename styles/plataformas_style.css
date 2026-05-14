@@ -124,6 +124,7 @@ main{
     background-color: var(--primary);
     border-radius: 50%;
 }
+
 h2{
 
     margin-top: 2rem;
@@ -153,7 +154,7 @@ h2{
     padding: 1rem;
     font-size: 18px;
     text-align: center;
-    transition: 0.2s ease;
+    transition: 0.1s ease;
 }
 
 .check{
@@ -188,10 +189,18 @@ h2{
 
 
     background-color: var(--primary);
-    margin-top: 0;
+    margin-top: 1rem;
 }
 
-.ios__checkbox, .android__checkbox, .web__checkbox{
+.form__enlaces{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.checkbox{
     appearance: none;
     width: 82%;
     height: 30.5vh;
@@ -210,8 +219,164 @@ h2{
 
 .checkbox:checked+.plataforma_checkbox{
     border: 5px solid var(--primary);
+    scale: 1.03;
 }
 
 .web__checkbox{
     margin-top: 155%;
+}
+
+@media (min-width:768px) and (max-width:1023px){
+
+    header{
+        
+        height: 8vh;
+    }
+
+    img{
+        width: 600%;
+        position: relative;
+        right: 10px;
+        bottom: 8px;
+    }
+
+    .header__img{
+        width: 10%;
+        overflow: hidden;
+    }
+
+    .paso__circle{
+    width: 4%;
+    height: 250%;
+    border: 2px solid var(--primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    background-color: white;
+    }
+
+    .pasos{
+        margin-bottom: 3rem;
+        margin-top: 2rem;
+    }
+    .plataformas{
+        margin-top: 5%;
+    }
+    .plataforma_checkbox{
+
+        width: 48%;
+        min-height: 350px;
+        border-radius: 13px;
+        border: solid 3px var(--primary-gray);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding: 1rem;
+        font-size: 18px;
+        text-align: center;
+        transition: 0.1s ease;
+    }
+
+    .plataforma__form{
+        width: 100%;
+    
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    gap: 10px;
+    flex-wrap: wrap;
+    }
+
+    .form__enlaces{
+        flex-direction: row;
+        justify-content: space-evenly;
+        
+    }
+    .form__button_cancel, .form__button_next{
+        width: 40%;
+        height: 4rem;
+    }
+
+    .checkbox{
+        
+        appearance: none;
+    width: 43%;
+    height: 40vh;
+    position: absolute;
+    z-index: 10;
+   transition: 1s;
+
+    
+   border-radius: 10px;
+    }
+
+    .android__checkbox{
+        bottom: 20%;
+        right: 5.9%;
+
+    }
+
+    .ios__checkbox{
+        left: 5.9%;
+        bottom: 20%;
+    }
+
+    .web__checkbox{
+    bottom:  -21%;
+    }
+
+    .pasos__progreso{
+        width: 28%;
+    }
+    main{
+        padding: 2rem;
+    }
+
+    .plataforma__form{
+
+        
+        gap: 20px;
+    }
+}
+
+@media (min-width:1024px){
+    header{
+        width: 100%;
+        height: 8vh;
+        background: var(--card-bg);
+        display: flex;
+        border-bottom: #cbd0d4 solid 1px;
+        background-color: lightcoral;
+        justify-content: space-between;
+    }
+
+    .header__img{
+        width: 20%;
+        background-color: lightblue;
+        display: flex;
+
+    }
+
+    .header__img img{
+        width: 100%;
+    }
+
+    .header__nav, a{
+        height: 100%;
+        width: 40%;
+        background-color: lightgreen;
+        display: flex;
+        margin-right: 4%;
+        justify-content: center;
+        align-items: center;
+        font-size: 1.1rem;
+    }
+    .header__button{
+        width: 40%;
+        height: 3rem;
+    }
 }
