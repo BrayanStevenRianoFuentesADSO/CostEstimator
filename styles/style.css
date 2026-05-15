@@ -13,9 +13,8 @@ body{
    display: flex;
    justify-content: center;
    align-items: center;
-   padding: 40px;
+   padding: 90px;
    background:linear-gradient(45deg, orange,rgb(131, 121, 121), blue);
-   padding: 110px;
 } 
 .texto{
     text-align: left;
@@ -51,7 +50,7 @@ body{
     cursor: pointer;
     color: white; 
     text-decoration: none;
-    
+    padding: 10px;
 }
 .comenzar:hover{
     transform: scale(1.05), ;
@@ -59,7 +58,8 @@ body{
     box-shadow: 0 0 15px rgb(237, 202, 136);
 }
 .imagen1 img{
-    width: 400px;
+    width: 300px;
+    height: 200px;
     max-width: 600px;
     display: flex;
     margin-right: 20px;
@@ -69,17 +69,17 @@ body{
 .beneficios h2{
     display: flex;
     justify-content: center;
-    padding: 15px;
-    font-size:33px;
+    padding: 5px;
+    font-size:40px;
 }
 .grid-texto{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    padding: 90px;
+    padding: 25px;
     text-align: center;
-    font-size: 25px;
-    gap: 60px;
+    font-size: 20px;
+    gap: 15px;
 }
 
 .reloj{
@@ -97,14 +97,14 @@ body{
 .ajustes:hover{
     box-shadow: 0 10px 30px rgb(237, 202, 136);
     background-color: rgb(255, 247, 247);
-    transform: translateY(-3px) scale(1.2);
+    transform: translateY(-3px) scale(1.05);
     transition: all 0.2s ease;
 }
 
 .ajustes p{
     text-align: center;
     width: 250px;
-    font-size: 19px;
+    font-size: 14px;
     justify-content: center;
 }
 .icon img{
@@ -218,6 +218,175 @@ body{
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
+    }
+
+    .footer-links a{
+        margin: 10px;
+    }
+}
+
+@media (min-width:1024px) and (max-width:1026px){
+       .header{
+        flex-direction: row;
+        text-align: center;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .texto{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h2{
+        font-size: 52px;
+        text-align: center;
+    }
+
+    .texto p{
+        width: 100%;
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .comenzar{
+        margin: 30px auto;
+    }
+    .comenzar a{
+    text-decoration: dotted;
+    padding: 10px;
+}
+
+    .imagen1 img{
+        width: 320px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .beneficios h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .grid-texto{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .ajustes{
+        width: 90%;
+        height: auto;
+    }
+    .ajustes:hover{
+    transform: translateY(-3px) scale(1.1);
+    transition: all 0.2s ease;
+    }
+
+    .ajustes p{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .footer{
+        flex-direction: row;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .footer-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        
+    }
+
+    .footer-links a{
+        margin: 10px;
+    }
+}
+@media (max-width:427px){
+       .header{
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .texto{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h2{
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .texto p{
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .comenzar{
+        margin: 30px auto;
+    }
+    .comenzar a{
+    text-decoration: dotted;
+    padding: 10px;
+}
+
+    .imagen1 img{
+        width: 320px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .beneficios h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .grid-texto{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .ajustes{
+        width: 90%;
+        height: auto;
+    }
+    .ajustes:hover{
+    transform: translateY(-3px) scale(1.1);
+    transition: all 0.2s ease;
+    }
+
+    .ajustes p{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        font-size: 15px;
+    }
+
+    .text1{
+        font-size: 20px;
     }
 
     .footer-links a{
