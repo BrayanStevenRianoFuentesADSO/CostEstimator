@@ -20,11 +20,6 @@ body{
     padding:50px 30px;
 }
 
-    .todotodo{
-        display: flex;
-        justify-content: space-between;
-        gap: 200px;
-    }
 
 .logo{
     display: flex;
