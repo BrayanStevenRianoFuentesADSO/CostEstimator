@@ -133,23 +133,38 @@ hr{
     height: auto;
     border-radius: 20px;
     justify-content: flex-end;
-    background: linear-gradient(to right, #2ecc71, #2196f3);
+      background: linear-gradient(to right, #2ecc71, #2196f3);
     padding: 5px;
 }
 
+
+.cost1:hover, .cost2:hover, .cost3:hover, .cost4:hover {
+    box-shadow: 0 0 20px rgb(70, 70, 223);
+    transition: all 0.2s;
+    transform: scale(1.1);
+}
+
+.titu{
+    display: flex;
+   height: auto;
+    border-radius: 20px;
+    justify-content: flex-start;
+    padding-top: 20px;
+    font-size: 2vw;
+}
+
+.container{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: -12px;
+}
+.container > div {
+    width: 80%;
+    padding: 0%;
+}
 
 .barra-color2 {
-    display: flex;
-    background-color: green;
-    width: 32%;
-    height: auto;
-    border-radius: 20px;
-    justify-content: flex-end;
-    background:linear-gradient(to right,#f9e8d3 ,#8011ee);
-    padding: 5px;
-}
-
-.barra-color3 {
     display: flex;
     background-color: green;
     width: 36%;
@@ -160,31 +175,16 @@ hr{
     padding: 5px;
 }
 
-.barra-color4 {
+.barra-color3 {
     display: flex;
     background-color: green;
-    width: 16%;
+    width: 32%;
     height: auto;
     border-radius: 20px;
     justify-content: flex-end;
-    color: white;
-    background: linear-gradient(to right, #2ecc71, #2196f3);
+    background:linear-gradient(to right,#f9e8d3 ,#8011ee);
     padding: 5px;
 }
-
-.cost1:hover, .cost2:hover, .cost3:hover, .cost4:hover {
-    box-shadow: 0 0 20px rgb(70, 70, 223);
-    transition: all 0.2s;
-    transform: scale(1.1);
-}
-
-.titu{
-    display: flex;
-    justify-content: space-between;
-    padding:0 50px;
-    font-size: 35px ;
-    margin: 0 130px;
-} 
 table{
     width: 80%;
     margin: 20px auto;
@@ -225,6 +225,10 @@ th{
     box-shadow: 0 0 10px blue;
 }
 
+.reportes button:active{
+    transform: scale(0.8);
+}
+
 
 .reportes a{
     display: flex;
@@ -244,7 +248,7 @@ footer:hover{
     text-shadow: 0 0 20px black;
 }
 
-@media (min-width:768px){
+@media (min-width:768px) and (max-width: 770px){
 
     *{
     margin: 0;
@@ -300,10 +304,14 @@ footer:hover{
 .titu{
     display: flex;
     justify-content: space-between;
-    padding:20px 50px;
+    padding:20px 20px;
     font-size: 35px ;
-    margin: 20px 130px;
+    margin: 20px 70px;
+    width: 90%;
 } 
+.container{
+    width: 90%;
+}
 
 table{
     width: 80%;
@@ -320,4 +328,127 @@ table{
     text-decoration: none;
     padding: 20px;
 }
+}
+
+
+
+@media (max-width: 426px){
+
+    .header{
+        flex-direction: column;
+        height: auto;
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .logo img{
+        width: 200px;
+        height: auto;
+    }
+
+    .menu ul{
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+    }
+
+    .menu a{
+        font-size: 16px;
+    }
+
+    .text{
+        font-size: 24px;
+        text-align: center;
+        margin: 20px 10px;
+    }
+
+    hr{
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    .total{
+        font-size: 20px;
+        text-align: center;
+        padding: 15px;
+    }
+
+    .todo{
+        grid-template-columns: 1fr;
+        width: 90%;
+        gap: 20px;
+    }
+
+    .cost1,
+    .cost2,
+    .cost3,
+    .cost4{
+        padding: 15px;
+    }
+
+    .cost1 h3,
+    .cost2 h3,
+    .cost3 h3,
+    .cost4 h3{
+        font-size: 16px;
+    }
+
+    .cost1:hover, .cost2:hover, .cost3:hover, .cost4:hover {
+    box-shadow: 0 0 20px rgb(70, 70, 223);
+    transition: all 0.2s;
+    transform: scale(1.05);
+}
+    .barra-color1{
+    display: flex;
+    width: 16%;
+    height: auto;
+    padding: 5px;
+    }
+
+    .titu{
+        font-size: 22px;
+        text-align: center;
+        justify-content: center;
+        padding: 10px;
+    }
+
+    .container > div{
+        width: 100%;
+    }
+
+    table{
+        width: 85%;
+        font-size: 12px;
+        display: block;
+        overflow-x: auto;
+    }
+
+    th, td{
+        padding: 8px;
+        white-space: nowrap;
+    }
+
+    .reportes a{
+        justify-content: center;
+        margin: 0;
+    }
+
+    .reportes button{
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    footer{
+        text-align: center;
+        padding: 10px;
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 1024px){
+    .text{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    }
 }
