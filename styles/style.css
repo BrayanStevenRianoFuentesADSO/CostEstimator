@@ -82,6 +82,9 @@ body{
     gap: 60px;
 }
 
+.reloj{
+    border-radius: 20px;
+}
 .ajustes{
     border: 2px solid black;
     border-radius: 10px;
