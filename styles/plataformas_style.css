@@ -370,12 +370,6 @@ h2{
         justify-content: space-between;
     }
 
-    .header__img{
-        width: 20%;
-        
-        display: flex;
-
-    }
 
     .header__img img{
         width: 100%;

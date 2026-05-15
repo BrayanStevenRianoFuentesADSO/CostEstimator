@@ -11,8 +11,9 @@
     --bg:#f2f7fb;
     --card-bg:#feffff;
     --primary:#3374da;
-    --primary-hover:#3381da;
+    --primary-hover:#2d62b8;
     --primary-gray:#bac1cb;
+    --primary-gray-hover:#a1a7b1;
 }
 
 body{
@@ -56,11 +57,7 @@ img{
     padding: 8px;
     gap: 2px;
     padding-right: 1px;
-    
 }
-
-
-
 
 main{
 
@@ -101,6 +98,7 @@ main{
     background-color: var(--primary);
     z-index: 1;
 }
+
 .paso__circle{
 
     width: 8%;
@@ -140,16 +138,21 @@ h3{
     padding-left: 1rem;
     margin-bottom: 2rem;
 }
+.details__input:hover, .details__input_mensaje:hover{
+    border: 2px solid var(--primary-hover);
+}
 
 .details__input_mensaje{
 
     height: 12rem;
     
 }
+
 label{
     align-self: flex-start;
     margin-left: 1rem;
 }
+
 form{
     display: flex;
     flex-direction: column;
@@ -173,15 +176,14 @@ form{
 
 .details__button:hover{
     background-color: var(--primary-hover);
+    
 }
 
 .resources{
     width: 100%;
-    
-   
     height: 36rem;
     margin-top: 1rem;
-    margin-bottom: 3rem
+    margin-bottom: 3rem;
 }
 
 .recurso{
@@ -191,27 +193,23 @@ form{
     margin-top: 10px;
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     padding: 1rem;
     gap: 1rem;
     border: 2px solid var(--primary-gray);
     border-radius: 10px;
     
+    
 }
 
 .recurso__img{
     width: 25%;
-    
-
-
 }
 
-
-
-.recurso p{
-    width: 75%;
-    text-align: left;
-    margin-top: 20%;
+.recurso{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     
 }
 
@@ -236,8 +234,6 @@ footer{
     align-items: center;
     justify-content: center;
     flex-direction: column;
-
-    
 }
 
 .footer__social{
@@ -248,10 +244,174 @@ footer{
     display: flex;
     align-items: center;
     justify-content: center;
-
 }
 
 .footer__social a{
 
     width: 15%;
+}
+
+@media (min-width:768px) and (max-width:1023px){
+
+    header{
+        height: 8vh;
+    }
+
+    .header__img{
+        width: 10%;
+    }
+
+    .paso__circle{
+        width: 4%;
+    }
+
+    main{
+        padding: 2rem;
+    }
+
+    .footer__links{
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer__social a{
+        width: 8%;
+    }
+    p{
+        margin-right: 100px;
+    }
+}
+
+@media (min-width:1024px){
+
+    header{
+        height: 8vh;
+        justify-content: space-between;
+    }
+
+    
+
+    .header__img img{
+        width: 100%;
+        position: static;
+    }
+
+    .header__nav, a{
+        height: 100%;
+        width: 40%;
+        margin-right: 4%;
+        justify-content: center;
+        font-size: 1.1rem;
+    }
+
+    .header__button{
+        width: 40%;
+        height: 3rem;
+    }
+
+    main{
+        padding: 2rem 4rem;
+    }
+    p{
+        margin-right: 100px;
+    }
+    .pasos{
+        width: 60%;
+    }
+
+    .pasos__progreso{
+        width: 55%;
+    }
+
+    .paso__circle{
+        width: 2.6%;
+    }
+
+    .details{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        align-items: flex-start;
+        gap: 2rem;
+    }
+
+    .details__input{
+
+        height: 20%;
+    }
+    .details p{
+        width: 100%;
+        font-size: 1rem;
+        margin: 0;
+    }
+
+    form{
+        width: 58%;
+        height: 55vh;
+        padding: 2rem;
+        align-items: flex-start;
+    }
+
+    .resources{
+        width: 25%;
+        height: auto;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .recurso{
+        
+        min-height: 7rem;
+
+    }
+    .recurso:hover{
+        scale: 1.05;
+    }
+
+    .recurso__img{
+        width: 15%;
+    }
+
+    .recurso p{
+        margin-top: 0;
+    }
+    h3{
+        text-align: left;
+        font-size: 1.5rem;
+    }
+    .details__button{
+        width: 20%;
+        height: 20%;
+        align-self: flex-end;
+        margin-right: 5%;
+    }
+
+    footer{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 1rem 4rem;
+    }
+
+    .footer__links{
+        width: auto;
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .footer__social{
+        width: auto;
+        gap: 1rem;
+    }
+
+    .footer__social a{
+        width: 3rem;
+    }
+
+    a:hover{
+        text-decoration: underline;
+    }
+    .footer__redes:hover{
+        scale: 1.15;
+    }
 }
