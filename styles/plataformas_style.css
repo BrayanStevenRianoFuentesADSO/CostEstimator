@@ -5,13 +5,16 @@
     padding: 0;
     box-sizing: border-box;
     font-family: "Inter", sans-serif;
+    transition: 0.3s;
 }
 
 :root{
     --bg:#f2f7fb;
     --card-bg:#feffff;
     --primary:#3374da;
+    --primary-hover:#2d62b8;
     --primary-gray:#bac1cb;
+    --primary-gray-hover:#a1a7b1;
 }
 
 body{
@@ -52,7 +55,6 @@ img{
 }
 
 .header__button{
-    border: 1px solid black;
     border-radius: 8px;
 }
 
@@ -134,7 +136,6 @@ h2{
 .plataforma__form{
 
     width: 100%;
-    
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -201,15 +202,19 @@ h2{
 }
 
 .checkbox{
+    display: flex;
+    align-items: center;
+    justify-content: center;
     appearance: none;
     width: 82%;
     height: 30.5vh;
     position: absolute;
     z-index: 10;
    transition: 1s;
-
+    
    opacity: 50%;
    border-radius: 10px;
+   cursor: pointer;
    
 }
 
@@ -221,7 +226,11 @@ h2{
     border: 5px solid var(--primary);
     scale: 1.03;
 }
-
+.checkbox:checked+.plataforma_checkbox .check{
+    display: flex;
+    position: absolute;
+    top: 5%;
+}
 .web__checkbox{
     margin-top: 155%;
 }
@@ -344,19 +353,26 @@ h2{
 }
 
 @media (min-width:1024px){
+    
+    body{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+    }
     header{
         width: 100%;
         height: 8vh;
         background: var(--card-bg);
         display: flex;
         border-bottom: #cbd0d4 solid 1px;
-        background-color: lightcoral;
+        
         justify-content: space-between;
     }
 
     .header__img{
         width: 20%;
-        background-color: lightblue;
+        
         display: flex;
 
     }
@@ -368,15 +384,107 @@ h2{
     .header__nav, a{
         height: 100%;
         width: 40%;
-        background-color: lightgreen;
+        
         display: flex;
         margin-right: 4%;
         justify-content: center;
         align-items: center;
         font-size: 1.1rem;
+        
     }
     .header__button{
         width: 40%;
         height: 3rem;
     }
+
+    .plataformas{
+        width: 85vw;
+        height: 80vh;
+
+    }
+
+    .plataforma__form{
+
+        width: 100%;
+        height: 80%;
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+        padding-left: 3rem;
+        padding-right: 3rem;
+        
+
+    }
+    .plataforma_checkbox{
+        width: 25%;
+        height: 35vh;
+        border-radius: 20px;
+
+    }
+    .form__enlaces{
+        flex-direction: row;
+        
+    }
+
+    .form__button_cancel, .form__button_next{
+        width: 25%;
+        height: 6vh;
+        justify-self: center;
+        
+    }
+    
+    .form__button_cancel:hover{
+        background-color: var(--primary-gray-hover);
+    }
+
+    .form__button_next:hover{
+        background-color: var(--primary-hover);
+    }
+    .pasos__grafico{
+        width: 70%;
+    }
+    .pasos__progreso{
+        width: 18%;
+    }
+    .paso__circle{
+        width: 2.6%;
+    }
+
+    h2{
+        font-size: 3rem;
+        margin: 2rem;
+    }
+    p{
+        align-self: flex-start;
+        margin-left: 15%;
+    }
+    .checkbox{
+        
+        width: 19%;
+        height: 35%;
+
+    }
+
+    .ios__checkbox{
+        top: 33%;
+        left: 19.2%;
+        
+    }
+.checkbox:hover+.plataforma_checkbox{
+    scale: 1.05;
 }
+    .android__checkbox{
+       bottom: 32%;
+    }
+
+    .web__checkbox{
+        bottom: 32%;
+        right: 19.2%;
+    }
+    .header__nav a:hover{
+     text-decoration: underline;   
+    }
+}
+
