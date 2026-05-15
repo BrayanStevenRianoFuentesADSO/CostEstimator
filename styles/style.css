@@ -142,3 +142,82 @@ body{
     color: rgb(97, 97, 97);
     transition: 0.2s;
 }
+
+@media (min-width: 768px) and (max-width: 770px){
+
+    .header{
+        flex-direction: row;
+        text-align: center;
+        padding: 60px 30px;
+        gap: 40px;
+    }
+
+    .texto{
+        width: 100%;
+        align-items: center;
+        text-align: center;
+    }
+
+    .texto h2{
+        font-size: 42px;
+        text-align: center;
+    }
+
+    .texto p{
+        width: 100%;
+        font-size: 24px;
+        text-align: center;
+    }
+
+    .comenzar{
+        margin: 20px auto;
+    }
+
+    .imagen1 img{
+        width: 320px;
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .beneficios h2{
+        font-size: 30px;
+        text-align: center;
+    }
+
+    .grid-texto{
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        gap: 30px;
+    }
+
+    .ajustes{
+        width: 90%;
+        height: auto;
+    }
+    .ajustes:hover{
+    transform: translateY(-3px) scale(1.1);
+    transition: all 0.2s ease;
+    }
+
+    .ajustes p{
+        width: 100%;
+        font-size: 18px;
+    }
+
+    .footer{
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+    }
+
+    .footer-links{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .footer-links a{
+        margin: 10px;
+    }
+}

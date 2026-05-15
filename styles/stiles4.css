@@ -15,10 +15,16 @@ body{
     height:70px;
     display:flex;
     align-items:center;
-    justify-content: space-around;
+    justify-content: space-between;
     border: 1px solid black;
     padding:50px 30px;
 }
+
+    .todotodo{
+        display: flex;
+        justify-content: space-between;
+        gap: 200px;
+    }
 
 .logo{
     display: flex;
@@ -248,7 +254,7 @@ footer:hover{
     text-shadow: 0 0 20px black;
 }
 
-@media (min-width:768px) and (max-width: 770px){
+@media (min-width:768px) and (max-width:770px){
 
     *{
     margin: 0;
@@ -256,17 +262,15 @@ footer:hover{
     box-sizing: border-box;
     }
     .header{ 
-    width: 775px;
-    height:20px;
-    display:flex;
-    justify-content: space-between;
-    padding:50px 30px;
+    width: 768px;
+    height:90px;    display:flex;
+    justify-content: space-around;
+    padding:50px 5px;
     }
     
-    
     .logo img{
-    width: 150px;
-    height: 40px;
+    width: 180px;
+    height: 60px;
     display: block;
     }
 
@@ -276,6 +280,10 @@ footer:hover{
     padding:10px;
     font-size: 30px;
     margin:20px 30px;
+    }
+
+    .text:hover{
+        text-shadow: 0 0 20px wheat;
     }
 
     hr{
@@ -306,7 +314,7 @@ footer:hover{
     justify-content: space-between;
     padding:20px 20px;
     font-size: 35px ;
-    margin: 20px 70px;
+    margin: 20px 90px;
     width: 90%;
 } 
 .container{
@@ -327,6 +335,14 @@ table{
     margin: 0 150px;
     text-decoration: none;
     padding: 20px;
+}
+
+.reportes button{
+    display: flex;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    align-content: center;
 }
 }
 
@@ -445,10 +461,53 @@ table{
     }
 }
 
-@media (max-width: 1024px){
+@media (min-width: 1024px) and (max-width:1025px){
+
+        *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
     .text{
     display: flex;
     justify-content: center;
     text-align: center;
+    }
+
+    .header{
+    width: 1025px;
+    height:20px;
+    display:flex;
+    justify-content: space-around;
+    padding:50px 30px;
+    }
+
+    .container{
+        display: flex;
+        width: 650px;
+        justify-content: space-between;
+    }
+
+    .logo img{
+        width: 300px;
+    }
+
+        .titu{
+        font-size: 26px;
+        text-align: center;
+        justify-content: center;
+        
+    }
+
+    .container > div{
+        width:80%;
+    }
+
+    .reportes a{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 90px;
+    text-decoration: none;
     }
 }
